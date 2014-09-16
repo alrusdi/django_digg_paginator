@@ -252,7 +252,7 @@ class DiggPaginator(ExPaginator):
         # finally, normalize values that are out of bound; this basically
         # fixes all the things the above code screwed up in the simple case
         # of few enough pages where one range would suffice.
-        main_range = [max(main_range[0], 1), min(main_range[1], num_pages)]
+        main_range = [max(main_range[0], 1), min(main_range[1], num_pages)-1]
 
         # make the result of our calculations available as custom ranges
         # on the ``Page`` instance.
